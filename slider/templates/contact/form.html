@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class ="jumbotron" id ="contact">
+  <h1>We're here to help</h1>
+  <p>Click below to send an email:</p>
+</div>
+
+
+
+
+	 
+   <div class = "container-fluid" id ="form" > 
+   	<div class = "jumbotron">
+ 
+   <form action="" method="post" > 
+   	{% if form.errors %}
+   	<h3>{{form.errors}} </h3>
+   	{% endif %}
+
+   {% csrf_token %} 
+{% for field in form %}
+<fieldset class="control-group">
+    <label class="control-label" for="id_{{ field.name }}">{{ field.label }}</label>
+    <div class="form-group">
+       {{field}}
+        <p class="help-text">{{ field.help_text }} </p>
+    </div>
+</fieldset>
+{% endfor %}
+
+
+    <button type="submit" class= "btn btn-primary" value="Send message" >Send!
+	</button>
+  
+</form>
+</div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

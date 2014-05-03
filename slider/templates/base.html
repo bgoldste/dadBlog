@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Slider</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS -->
+    {% load staticfiles %}
+    <link href="{% static "slider/css/bootstrap.min.css" %}" rel="stylesheet">
+   
+    {% load staticfiles %}
+    <link href="{% static "slider/css/ben.css" %}" rel="stylesheet">
+    
+    <!-- Custom styles for this template -->
+   
+
+  <style type="text/css"></style></head>
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">MSG Communications</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/about">About</a>
+                    </li>
+                    <li><a href="/#services">Services</a>
+                    </li>
+                    <li><a href="/contact">Contact</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+                         <ul class="dropdown-menu">
+                            <li><a href="/media-golden-rules">10 Media Golden Rules </a></li>
+                            <li><a href="/messaging-tips">Messaging Tips</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+   
+
+    {% block content %}{% endblock %}
+
+
+     <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li><a href="/">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li><a href="/about">About</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li><a href="/#services">Services</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li><a href="/contact">Contact</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; MSG Communications 2014. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+{% load staticfiles %}
+    <script type ="text/javascript" src="{% static "slider/jquery.js" %}"></script>
+    {% load staticfiles %}
+    <script src="{% static "slider/js/bootstrap.js" %}"></script>
+   
+
+</body></html>

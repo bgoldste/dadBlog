@@ -1,58 +1,36 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+{% extends "base.html" %}
 
-    <title>Slider</title>
-
-    <!-- Bootstrap core CSS -->
-    <!-- Bootstrap core CSS -->
-    {% load staticfiles %}
-    <link href="{% static "slider/css/bootstrap.min.css" %}" rel="stylesheet">
-    {% load staticfiles %}
-    <link href="{% static "slider/css/slidercss.css" %}" rel="stylesheet">
-    <!-- Custom styles for this template -->
-   
-
-  <style type="text/css"></style></head></head>
-<body>
-<div class="navbar navbar-fixed-top alt" data-spy="affix" data-offset-top="1000">
-  <div class="container">
-    <div class="navbar-header">
-      <a href="#" class="navbar-brand">Home</a>
-      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-    </div>
-    <div class="navbar-collapse collapse" id="navbar">
-      <ul class="nav navbar-nav">
-        <li><a href="/">What I do</a></li>
-        <li><a href="/#sec2">Who I've worked for</a></li>
-        <li><a href="/#sec3">How we can help</a></li>
-        <li><a href="/#sec4">Contact</a></li>
-      </ul>
-    </div>
-   </div>
-</div>
+{% block content %}
+<div class ="jumbotron">
+  <h1>We're here to help</h1>
+  <p>Click below to send an email or call:</p>
 
 
-
-
-<div class="blurb">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3 text-center">
-        <h1>Want to know more?</h1>
-        <p class="lead">Interested?</p>
-      </div>
-    </div>
+  <form role="form">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
   </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+ <textarea class="form-control" rows="3"></textarea>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
 </div>
 
-</body>
+
+
+
+
+
+{% endblock %}
