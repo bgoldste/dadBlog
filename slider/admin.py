@@ -1,5 +1,5 @@
 from django.contrib import admin
-from slider.models import Slide
+from slider.models import Contact
 # Register your models here.
 
-admin.site.register(Slide)
+admin.site.register(Contact)

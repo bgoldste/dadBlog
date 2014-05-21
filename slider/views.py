@@ -32,6 +32,13 @@ def about(request):
 	context = RequestContext(request, {})
 	return HttpResponse(template.render(context))
 
+def golden_rules(request):
+	template = loader.get_template('slider/golden_rules.html')
+
+	context = RequestContext(request, {})
+	return HttpResponse(template.render(context))
+
+
 
 
 
@@ -39,7 +46,7 @@ class ContactView(CreateView):
     template_name = "contact/form.html"
     form_class = ContactForm
     model = Contact
-    success_url = '/contact/thanks/'
+    success_url = '/thanks/'
     def form_valid(self, form):
         # This method is called when valid form data has been POSTed.
         # It should return an HttpResponse.

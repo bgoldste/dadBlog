@@ -24,6 +24,7 @@ class ContactForm(forms.ModelForm):
 
     def save(self, commit=True):
         instance = super(ContactForm, self).save(commit=commit)
-        send_mail('A new email from your site!', instance.message + "here's the email sent from " + instance.email, 'madeup@gmail.com', ['bengoldstein9@gmail.com'], fail_silently=False)
+
+        send_mail('A new email from your site!', instance.name + "   " + instance.email + "    from company:" + instance.company + " sent you this message:    " + instance.message + "phone number: " +instance.phone_number , 'madeup@gmail.com', ['msgcommunications@gmail.com'], fail_silently=False)
       
         return instance
